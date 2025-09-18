@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Medical_Assistance.popupCadastroProfissional"
+                        xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    
+    <VerticalStackLayout Padding="20" Spacing="15" Margin="0">
+        <Label Text="Formulário de Agendamento" 
+           FontSize="40" 
+           HorizontalOptions="Center" 
+           FontAttributes="Bold"
+           TextColor="#610000"/>
+
+        <Entry Placeholder="Nome do Paciente" BackgroundColor="PeachPuff" PlaceholderColor="White"/>
+        <Entry Placeholder="Data da Consulta" BackgroundColor="PeachPuff" PlaceholderColor="White"/>
+        <Entry Placeholder="Hora da Consulta" BackgroundColor="PeachPuff" PlaceholderColor="White"/>
+
+
+        <Button Text="Confirmar" 
+            Clicked="ConfirmarCadastro_Clicked"
+            TextColor="White"
+            BackgroundColor="DarkRed"
+            x:Name="ConfirmarCadastro"/>
+        <Button x:Name="CancelarCadastro"
+        Text="Cancelar"
+                Clicked="CancelarCadastro_Clicked"
+            TextColor="White"
+            BackgroundColor="DarkRed"/>
+    </VerticalStackLayout>
+</toolkit:Popup>

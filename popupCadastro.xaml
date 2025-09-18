@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Medical_Assistance.popupCadastro"
+             WidthRequest="400"
+             HeightRequest="600">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15" Margin="0">
+
+            <Label Text="Cadastro de Paciente" 
+                   FontSize="30" 
+                   HorizontalOptions="Center" 
+                   FontAttributes="Bold"
+                   TextColor="#610000"
+                   Margin="0,0,0,30"/>
+
+            <!-- Nome -->
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="NomeEntry"
+                       Placeholder="Nome Completo"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+
+            <!-- CPF -->
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="CpfEntry"
+                       Placeholder="CPF"
+                       MaxLength="11"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+
+            <!-- Data Nascimento -->
+            <Label Text="Data de Nascimento:" TextColor="Black"/>
+            <DatePicker x:Name="DataNascimentoPicker"
+                        BackgroundColor="DarkRed"/>
+
+            <!-- Sexo -->
+            <Picker x:Name="SexoPicker"
+                    Title="Sexo Biológico:"
+                    TitleColor="Black"
+                    BackgroundColor="DarkRed"
+                    TextColor="White"
+                    FontFamily="OpenSans"
+                    FontAttributes="Bold">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Masculino</x:String>
+                        <x:String>Feminino</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Contato -->
+            <Label Text="Contato:" TextColor="Black"/>
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="TelefoneEntry"
+                       Placeholder="Telefone"
+                       MaxLength="11"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="EmailEntry"
+                       Placeholder="E-mail"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+
+            <!-- Endereço -->
+            <Label Text="Endereço:" TextColor="Black"/>
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="CepEntry"
+                       Placeholder="CEP"
+                       MaxLength="8"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="RuaEntry"
+                       Placeholder="Rua"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="NumeroEntry"
+                       Placeholder="N°"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+            <Border Stroke="Black" StrokeThickness="1.5" StrokeShape="RoundRectangle 20" Margin="0">
+                <Entry x:Name="CidadeEntry"
+                       Placeholder="Cidade"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontAttributes="Bold"/>
+            </Border>
+
+            <!-- Estado -->
+            <Picker x:Name="EstadoPicker"
+                    Title="UF:"
+                    TitleColor="Black"
+                    BackgroundColor="DarkRed"
+                    TextColor="White"
+                    FontFamily="OpenSans"
+                    FontAttributes="Bold">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>AC</x:String>
+                        <x:String>AL</x:String>
+                        <x:String>AP</x:String>
+                        <x:String>AM</x:String>
+                        <x:String>BA</x:String>
+                        <x:String>CE</x:String>
+                        <x:String>DF</x:String>
+                        <x:String>ES</x:String>
+                        <x:String>GO</x:String>
+                        <x:String>MA</x:String>
+                        <x:String>MT</x:String>
+                        <x:String>MS</x:String>
+                        <x:String>MG</x:String>
+                        <x:String>PA</x:String>
+                        <x:String>PB</x:String>
+                        <x:String>PR</x:String>
+                        <x:String>PE</x:String>
+                        <x:String>PI</x:String>
+                        <x:String>RJ</x:String>
+                        <x:String>RN</x:String>
+                        <x:String>RS</x:String>
+                        <x:String>RO</x:String>
+                        <x:String>RR</x:String>
+                        <x:String>SC</x:String>
+                        <x:String>SP</x:String>
+                        <x:String>SE</x:String>
+                        <x:String>TO</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Complemento -->
+            <Editor x:Name="ComplementoEntry"
+                    Placeholder="Complemento"/>
+
+            <!-- Botões -->
+            <Button Text="Confirmar" 
+                    Clicked="ConfirmarCadastro_Clicked"
+                    TextColor="White"
+                    BackgroundColor="#610000"
+                    x:Name="ConfirmarCadastro"/>
+            <Button x:Name="CancelarCadastro"
+                    Text="Cancelar"
+                    Clicked="CancelarCadastro_Clicked"
+                    TextColor="White"
+                    BackgroundColor="#610000"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</toolkit:Popup>
